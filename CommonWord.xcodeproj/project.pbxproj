@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		18166DD91D8BFD240051524B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18166DD81D8BFD240051524B /* AppDelegate.swift */; };
 		18166DDB1D8BFD240051524B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18166DDA1D8BFD240051524B /* ViewController.swift */; };
-		18166DDE1D8BFD240051524B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18166DDC1D8BFD240051524B /* Main.storyboard */; };
 		18166DE01D8BFD240051524B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18166DDF1D8BFD240051524B /* Assets.xcassets */; };
-		18166DE31D8BFD240051524B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18166DE11D8BFD240051524B /* LaunchScreen.storyboard */; };
 		18166DEE1D8BFD240051524B /* CommonWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18166DED1D8BFD240051524B /* CommonWordTests.swift */; };
 		18166DF91D8BFD240051524B /* CommonWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18166DF81D8BFD240051524B /* CommonWordUITests.swift */; };
+		18166E0D1D8C08DC0051524B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18166E0B1D8C08DC0051524B /* LaunchScreen.storyboard */; };
+		18166E0E1D8C08DC0051524B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18166E0C1D8C08DC0051524B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,7 @@
 		18166DD51D8BFD240051524B /* CommonWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18166DD81D8BFD240051524B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18166DDA1D8BFD240051524B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18166DDD1D8BFD240051524B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		18166DDF1D8BFD240051524B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		18166DE21D8BFD240051524B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18166DDF1D8BFD240051524B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CommonWord/Assets/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		18166DE41D8BFD240051524B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18166DE91D8BFD240051524B /* CommonWordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonWordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18166DED1D8BFD240051524B /* CommonWordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWordTests.swift; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		18166DF41D8BFD240051524B /* CommonWordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonWordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18166DF81D8BFD240051524B /* CommonWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWordUITests.swift; sourceTree = "<group>"; };
 		18166DFA1D8BFD240051524B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18166E0B1D8C08DC0051524B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18166E0C1D8C08DC0051524B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +97,11 @@
 		18166DD71D8BFD240051524B /* CommonWord */ = {
 			isa = PBXGroup;
 			children = (
-				18166DD81D8BFD240051524B /* AppDelegate.swift */,
-				18166DDA1D8BFD240051524B /* ViewController.swift */,
-				18166DDC1D8BFD240051524B /* Main.storyboard */,
-				18166DDF1D8BFD240051524B /* Assets.xcassets */,
-				18166DE11D8BFD240051524B /* LaunchScreen.storyboard */,
-				18166DE41D8BFD240051524B /* Info.plist */,
+				18166E0A1D8C06EA0051524B /* Assets */,
+				18166E091D8C063A0051524B /* Application */,
+				18166E081D8C06220051524B /* Models */,
+				18166E071D8C05FF0051524B /* Views */,
+				18166E061D8C055E0051524B /* ViewControllers */,
 			);
 			path = CommonWord;
 			sourceTree = "<group>";
@@ -123,6 +122,47 @@
 				18166DFA1D8BFD240051524B /* Info.plist */,
 			);
 			path = CommonWordUITests;
+			sourceTree = "<group>";
+		};
+		18166E061D8C055E0051524B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18166DDA1D8BFD240051524B /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		18166E071D8C05FF0051524B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18166E0B1D8C08DC0051524B /* LaunchScreen.storyboard */,
+				18166E0C1D8C08DC0051524B /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18166E081D8C06220051524B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18166E091D8C063A0051524B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				18166DE41D8BFD240051524B /* Info.plist */,
+				18166DD81D8BFD240051524B /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		18166E0A1D8C06EA0051524B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				18166DDF1D8BFD240051524B /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +269,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18166DE31D8BFD240051524B /* LaunchScreen.storyboard in Resources */,
+				18166E0E1D8C08DC0051524B /* Main.storyboard in Resources */,
 				18166DE01D8BFD240051524B /* Assets.xcassets in Resources */,
-				18166DDE1D8BFD240051524B /* Main.storyboard in Resources */,
+				18166E0D1D8C08DC0051524B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,25 +331,6 @@
 			targetProxy = 18166DF51D8BFD240051524B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		18166DDC1D8BFD240051524B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18166DDD1D8BFD240051524B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		18166DE11D8BFD240051524B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18166DE21D8BFD240051524B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		18166DFB1D8BFD240051524B /* Debug */ = {
@@ -400,6 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CommonWord/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.eGym.CommonWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CommonWord/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.eGym.CommonWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
