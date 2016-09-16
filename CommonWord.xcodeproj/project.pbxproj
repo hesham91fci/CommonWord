@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180F0A4E1D8C0EA9007F4ED6 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F0A4D1D8C0EA9007F4ED6 /* PeopleTableViewController.swift */; };
+		180F0A501D8C0F47007F4ED6 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F0A4F1D8C0F47007F4ED6 /* PeopleTableViewCell.swift */; };
+		180F0A521D8C1509007F4ED6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 180F0A511D8C1509007F4ED6 /* Localizable.strings */; };
 		18166DD91D8BFD240051524B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18166DD81D8BFD240051524B /* AppDelegate.swift */; };
-		18166DDB1D8BFD240051524B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18166DDA1D8BFD240051524B /* ViewController.swift */; };
 		18166DE01D8BFD240051524B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18166DDF1D8BFD240051524B /* Assets.xcassets */; };
 		18166DEE1D8BFD240051524B /* CommonWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18166DED1D8BFD240051524B /* CommonWordTests.swift */; };
 		18166DF91D8BFD240051524B /* CommonWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18166DF81D8BFD240051524B /* CommonWordUITests.swift */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180F0A4D1D8C0EA9007F4ED6 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		180F0A4F1D8C0F47007F4ED6 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
+		180F0A511D8C1509007F4ED6 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		18166DD51D8BFD240051524B /* CommonWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18166DD81D8BFD240051524B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18166DDA1D8BFD240051524B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18166DDF1D8BFD240051524B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CommonWord/Assets/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		18166DE41D8BFD240051524B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18166DE91D8BFD240051524B /* CommonWordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonWordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,7 +131,8 @@
 		18166E061D8C055E0051524B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				18166DDA1D8BFD240051524B /* ViewController.swift */,
+				180F0A4D1D8C0EA9007F4ED6 /* PeopleTableViewController.swift */,
+				180F0A4F1D8C0F47007F4ED6 /* PeopleTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				18166DDF1D8BFD240051524B /* Assets.xcassets */,
+				180F0A511D8C1509007F4ED6 /* Localizable.strings */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18166E0E1D8C08DC0051524B /* Main.storyboard in Resources */,
+				180F0A521D8C1509007F4ED6 /* Localizable.strings in Resources */,
 				18166DE01D8BFD240051524B /* Assets.xcassets in Resources */,
 				18166E0D1D8C08DC0051524B /* LaunchScreen.storyboard in Resources */,
 			);
@@ -296,8 +303,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18166DDB1D8BFD240051524B /* ViewController.swift in Sources */,
+				180F0A4E1D8C0EA9007F4ED6 /* PeopleTableViewController.swift in Sources */,
 				18166DD91D8BFD240051524B /* AppDelegate.swift in Sources */,
+				180F0A501D8C0F47007F4ED6 /* PeopleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CommonWord/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CommonWord/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.eGym.CommonWord;
@@ -432,7 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CommonWord/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CommonWord/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.eGym.CommonWord;
@@ -505,6 +513,7 @@
 				18166DFF1D8BFD240051524B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18166E001D8BFD240051524B /* Build configuration list for PBXNativeTarget "CommonWordTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +522,7 @@
 				18166E021D8BFD240051524B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18166E031D8BFD240051524B /* Build configuration list for PBXNativeTarget "CommonWordUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +531,7 @@
 				18166E051D8BFD240051524B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

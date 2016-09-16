@@ -1,25 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ys9-Yj-rYJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </mutableArray>
+        <mutableArray key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--People Table View Controller-->
+        <scene sceneID="DtL-BS-fW1">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CommonWord" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="Ys9-Yj-rYJ" customClass="PeopleTableViewController" customModule="CommonWord" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="MCh-dN-9MP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.41568627450000001" blue="0.1333333333" alpha="0.74894425679999999" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PeopleCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PeopleCell" rowHeight="85" id="CGR-Te-G5D" customClass="PeopleTableViewCell" customModule="CommonWord" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CGR-Te-G5D" id="MXP-x8-WRG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="84"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztn-sk-8HL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="84"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="84" id="I0O-aI-XDe"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="MsH-wd-tG4"/>
+                                                <constraint firstAttribute="width" secondItem="ztn-sk-8HL" secondAttribute="height" multiplier="50:7" id="vdy-iu-vkc"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="I0O-aI-XDe"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qy-K8-mDd">
+                                            <rect key="frame" x="8" y="55" width="118" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="118" id="G8T-U0-mVp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" red="0.94901960780000005" green="0.41568627450000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/1/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef4-ZL-o0h">
+                                            <rect key="frame" x="134" y="55" width="458" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="458" id="3Lv-gT-Hqf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" red="0.94901960780000005" green="0.41568627450000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ztn-sk-8HL" secondAttribute="trailing" id="2ga-D6-edq"/>
+                                        <constraint firstAttribute="bottom" secondItem="ef4-ZL-o0h" secondAttribute="bottom" constant="8" id="Cak-lY-7S9"/>
+                                        <constraint firstAttribute="trailing" secondItem="ef4-ZL-o0h" secondAttribute="trailing" constant="8" id="GKg-D9-fLA"/>
+                                        <constraint firstItem="0Qy-K8-mDd" firstAttribute="top" secondItem="MXP-x8-WRG" secondAttribute="top" constant="55" id="HRo-oE-SIW"/>
+                                        <constraint firstItem="ef4-ZL-o0h" firstAttribute="top" secondItem="MXP-x8-WRG" secondAttribute="top" constant="55" id="Icw-7Q-78o"/>
+                                        <constraint firstAttribute="bottom" secondItem="0Qy-K8-mDd" secondAttribute="bottom" constant="8" id="KLb-DV-zgm"/>
+                                        <constraint firstItem="ztn-sk-8HL" firstAttribute="top" secondItem="MXP-x8-WRG" secondAttribute="top" id="MG1-7Z-vMR"/>
+                                        <constraint firstItem="ztn-sk-8HL" firstAttribute="leading" secondItem="MXP-x8-WRG" secondAttribute="leading" id="Nnv-H9-oK4"/>
+                                        <constraint firstItem="ef4-ZL-o0h" firstAttribute="leading" secondItem="0Qy-K8-mDd" secondAttribute="trailing" constant="8" id="XlF-Jx-Ica"/>
+                                        <constraint firstItem="ef4-ZL-o0h" firstAttribute="leading" secondItem="0Qy-K8-mDd" secondAttribute="trailing" constant="8" id="dwX-r0-QDD"/>
+                                        <constraint firstAttribute="bottom" secondItem="ztn-sk-8HL" secondAttribute="bottom" id="jem-P6-Ahx"/>
+                                        <constraint firstItem="0Qy-K8-mDd" firstAttribute="leading" secondItem="MXP-x8-WRG" secondAttribute="leading" constant="8" id="lRf-nX-LVs"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImage" destination="ztn-sk-8HL" id="rOA-nP-s34"/>
+                                    <outlet property="speechDate" destination="ef4-ZL-o0h" id="6pb-tW-9gd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ys9-Yj-rYJ" id="NjM-E7-JJO"/>
+                            <outlet property="delegate" destination="Ys9-Yj-rYJ" id="znv-DI-NKT"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hv9-DW-WJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="247" y="-179"/>
         </scene>
     </scenes>
 </document>
