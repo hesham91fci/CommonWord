@@ -11,6 +11,10 @@ import UIKit
 class SpeechProcessingViewController: UIViewController {
     var fileContent:String!
     var commonWords=[String:Int]()
+    let pronounsArray=["his","her","hers","your","yours","their","theirs","this","that","those","these"]
+    let verbsArray=["would","have"]
+    let prepositionsArray=["from","with","about"]
+    let questionsArray=["what","whom","which","where","when"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +30,9 @@ class SpeechProcessingViewController: UIViewController {
             
             if let range = word.rangeOfString("\\w+", options: .RegularExpressionSearch) {
                 let result = word.substringWithRange(range)
-                if result.characters.count<=3 {
+                if result.characters.count<=3 || self.pronounsArray.contains(result)
+                || self.prepositionsArray.contains(result) || self.questionsArray.contains(result)
+                || self.verbsArray.contains(result){
                     continue
                 }
                 else{
@@ -44,8 +50,9 @@ class SpeechProcessingViewController: UIViewController {
             
         }
         
-        for (k,v) in (Array(commonWords).sort {$0 > $1}) {
-            print("\(k)=>\(v)")
+        let sortedCommonWords = commonWords.sort{ $0.1 > $1.1 }
+        for (word,frequency) in sortedCommonWords {
+            print(word,frequency)
         }
     }
     
