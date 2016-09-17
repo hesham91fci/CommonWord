@@ -10,6 +10,8 @@
 		180F0A4E1D8C0EA9007F4ED6 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F0A4D1D8C0EA9007F4ED6 /* PeopleTableViewController.swift */; };
 		180F0A501D8C0F47007F4ED6 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F0A4F1D8C0F47007F4ED6 /* PeopleTableViewCell.swift */; };
 		180F0A521D8C1509007F4ED6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 180F0A511D8C1509007F4ED6 /* Localizable.strings */; };
+		180F0A551D8C2BB2007F4ED6 /* Steve Jobs Speech.txt in Resources */ = {isa = PBXBuildFile; fileRef = 180F0A541D8C2BB2007F4ED6 /* Steve Jobs Speech.txt */; };
+		180F0A571D8C31A8007F4ED6 /* SpeechProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F0A561D8C31A8007F4ED6 /* SpeechProcessingViewController.swift */; };
 		18166DD91D8BFD240051524B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18166DD81D8BFD240051524B /* AppDelegate.swift */; };
 		18166DE01D8BFD240051524B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18166DDF1D8BFD240051524B /* Assets.xcassets */; };
 		18166DEE1D8BFD240051524B /* CommonWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18166DED1D8BFD240051524B /* CommonWordTests.swift */; };
@@ -39,6 +41,8 @@
 		180F0A4D1D8C0EA9007F4ED6 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		180F0A4F1D8C0F47007F4ED6 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		180F0A511D8C1509007F4ED6 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		180F0A541D8C2BB2007F4ED6 /* Steve Jobs Speech.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Steve Jobs Speech.txt"; sourceTree = "<group>"; };
+		180F0A561D8C31A8007F4ED6 /* SpeechProcessingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechProcessingViewController.swift; sourceTree = "<group>"; };
 		18166DD51D8BFD240051524B /* CommonWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18166DD81D8BFD240051524B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18166DDF1D8BFD240051524B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CommonWord/Assets/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -78,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180F0A531D8C2966007F4ED6 /* Speeches */ = {
+			isa = PBXGroup;
+			children = (
+				180F0A541D8C2BB2007F4ED6 /* Steve Jobs Speech.txt */,
+			);
+			path = Speeches;
+			sourceTree = "<group>";
+		};
 		18166DCC1D8BFD240051524B = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +113,7 @@
 		18166DD71D8BFD240051524B /* CommonWord */ = {
 			isa = PBXGroup;
 			children = (
+				180F0A531D8C2966007F4ED6 /* Speeches */,
 				18166E0A1D8C06EA0051524B /* Assets */,
 				18166E091D8C063A0051524B /* Application */,
 				18166E081D8C06220051524B /* Models */,
@@ -132,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				180F0A4D1D8C0EA9007F4ED6 /* PeopleTableViewController.swift */,
+				180F0A561D8C31A8007F4ED6 /* SpeechProcessingViewController.swift */,
 				180F0A4F1D8C0F47007F4ED6 /* PeopleTableViewCell.swift */,
 			);
 			path = ViewControllers;
@@ -279,6 +293,7 @@
 				180F0A521D8C1509007F4ED6 /* Localizable.strings in Resources */,
 				18166DE01D8BFD240051524B /* Assets.xcassets in Resources */,
 				18166E0D1D8C08DC0051524B /* LaunchScreen.storyboard in Resources */,
+				180F0A551D8C2BB2007F4ED6 /* Steve Jobs Speech.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +321,7 @@
 				180F0A4E1D8C0EA9007F4ED6 /* PeopleTableViewController.swift in Sources */,
 				18166DD91D8BFD240051524B /* AppDelegate.swift in Sources */,
 				180F0A501D8C0F47007F4ED6 /* PeopleTableViewCell.swift in Sources */,
+				180F0A571D8C31A8007F4ED6 /* SpeechProcessingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

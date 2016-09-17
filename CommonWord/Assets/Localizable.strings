@@ -10,3 +10,4 @@
 "GHANDI"="Ghandi";
 "STEVE_JOBS_SPEECH_DATE"="12/6/2005";
 "GHANDI_SPEECH_DATE"="21/4/1915";
+"ERROR_IN_FILE_PARSING"="error: file cannot be parsed";

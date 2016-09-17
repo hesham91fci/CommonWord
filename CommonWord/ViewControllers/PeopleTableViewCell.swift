@@ -13,12 +13,4 @@ class PeopleTableViewCell: UITableViewCell {
     @IBOutlet weak var speechDate:UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
-    override func layoutSubviews() {
-        self.frame = CGRectMake(self.frame.origin.x+5,
-                                self.frame.origin.y+10,
-                                self.bounds.size.width-10,
-                                self.bounds.size.height-5)
-        super.layoutSubviews()
-    }
-
 }

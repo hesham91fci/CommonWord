@@ -26,11 +26,6 @@ class PeopleTableViewController: UITableViewController {
         return 2
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 140.0
-    }
-
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PeopleCell", forIndexPath: indexPath) as! PeopleTableViewCell
 
@@ -91,6 +86,12 @@ class PeopleTableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let speechProcessingScreen = mainStoryBoard.instantiateViewControllerWithIdentifier("SpeechProcessingViewController") as! SpeechProcessingViewController
+        self.navigationController?.pushViewController(speechProcessingScreen, animated: true)
+    }
 
     /*
     // MARK: - Navigation
