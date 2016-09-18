@@ -76,10 +76,6 @@ class SpeechProcessingViewController: UIViewController {
         self.updateProgressBar(90.0)
         self.commonWordLabel.text = sortedCommonWords.first?.0
         self.updateProgressBar(100.0)
-        
-        for (word,frequency) in sortedCommonWords {
-            print(word,frequency)
-        }
     }
 
     override func didReceiveMemoryWarning() {
