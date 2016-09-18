@@ -17,14 +17,18 @@ class SpeechProcessingViewController: UIViewController {
     
     
     var fileContent:String!
+    var fileName:String!
     var commonWords=[String:Int]()
+    var errorThrown:Bool = false
     let pronounsArray=["HIS","HER","HRES","YOUR","YOURS","THEIR","THEIRS","THIS","THAT","THOSE","THESE","THEY"]
     let verbsArray=["WOULD","HAVE"]
     let prepositionsArray=["FROM","WITH","ABOUT"]
     let questionsArray=["WHAT","WHOM","WHICH","WHERE","WHEN"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.fileContentTextView.layer.borderWidth = 5.0
+        self.fileContentTextView.layer.borderColor = UIColor(red: 111/255, green: 146/255, blue: 13/255, alpha: 1).CGColor
         // Do any additional setup after loading the view.
     }
     
@@ -72,6 +76,10 @@ class SpeechProcessingViewController: UIViewController {
         self.updateProgressBar(90.0)
         self.commonWordLabel.text = sortedCommonWords.first?.0
         self.updateProgressBar(100.0)
+        
+        for (word,frequency) in sortedCommonWords {
+            print(word,frequency)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,15 +90,27 @@ class SpeechProcessingViewController: UIViewController {
 
     func readSpeech(){
         let bundle = NSBundle.mainBundle()
-        let filePath = bundle.pathForResource("Steve Jobs Speech", ofType: "txt")
+        let filePath = bundle.pathForResource(self.fileName, ofType: "txt")
         do
         {
-            self.fileContent = try String(contentsOfFile: filePath!)
-            self.fileContentTextView.text = self.fileContent
+            if(filePath != nil){
+                self.fileContent = try String(contentsOfFile: filePath!)
+                self.fileContentTextView.text = self.fileContent
+            }
+            else{
+                self.errorThrown=true
+            }
+            
         }
         catch
         {
+            let showAlert = UIAlertController(title: NSLocalizedString("APP_TITLE", comment: "comment"), message: NSLocalizedString("ERROR_IN_FILE_PARSING", comment: "comment"), preferredStyle: UIAlertControllerStyle.Alert)
+            
+            showAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "comment"), style: .Default, handler: { (action: UIAlertAction) in
+            }))
+            self.presentViewController(showAlert, animated: true, completion: nil)
             self.fileContent = NSLocalizedString("ERROR_IN_FILE_PARSING", comment: "comment")
+            errorThrown=true
         }
         self.updateProgressBar(25.0)
     }

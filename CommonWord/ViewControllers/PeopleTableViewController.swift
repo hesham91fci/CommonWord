@@ -92,6 +92,12 @@ class PeopleTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let speechProcessingScreen = mainStoryBoard.instantiateViewControllerWithIdentifier("SpeechProcessingViewController") as! SpeechProcessingViewController
+        if indexPath.item == 0 {
+            speechProcessingScreen.fileName = NSLocalizedString("STEVE_JOBS_TXT", comment: "comment")
+        }
+        else if indexPath.item == 1{
+            speechProcessingScreen.fileName = NSLocalizedString("GANDHI_SPEECH_TXT", comment: "comment")
+        }
         self.navigationController?.pushViewController(speechProcessingScreen, animated: true)
     }
 

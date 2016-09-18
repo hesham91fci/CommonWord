@@ -5,9 +5,11 @@
   Created by IBM on 9/16/16.
   Copyright © 2016 eGym. All rights reserved.
 */
-
+"APP_TITLE"="Common Word";
 "STEVE_JOBS"="Steve Jobs";
 "GHANDI"="Ghandi";
 "STEVE_JOBS_SPEECH_DATE"="12/6/2005";
 "GHANDI_SPEECH_DATE"="21/4/1915";
-"ERROR_IN_FILE_PARSING"="error: file cannot be parsed";
+"ERROR_IN_FILE_PARSING"="Error: file cannot be parsed";
+"GANDHI_SPEECH_TXT"="Gandhi Speech";
+"STEVE_JOBS_TXT"="Steve Jobs Speech";

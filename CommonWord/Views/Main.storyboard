@@ -116,7 +116,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="File Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="99g-OE-Msu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="File Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="99g-OE-Msu">
                                 <rect key="frame" x="0.0" y="101" width="600" height="209"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -128,18 +128,18 @@
                             <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="35" translatesAutoresizingMaskIntoConstraints="NO" id="Rwj-bb-llm">
                                 <rect key="frame" x="200" y="318" width="200" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.48627450979999998" green="0.80000000000000004" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.94901960780000005" green="0.41568627450000001" blue="0.1333333333" alpha="0.74894425679999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1hG-Or-TFG"/>
                                     <constraint firstAttribute="width" constant="200" id="QNK-oN-41k"/>
                                 </constraints>
-                                <color key="progressTintColor" red="0.48627450979999998" green="0.80000000000000004" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="progressTintColor" red="0.94901960780000005" green="0.41568627450000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="168" y="184" width="200" height="30"/>
                                 </variation>
                             </progressView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oh0-eR-ofw">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oh0-eR-ofw">
                                 <rect key="frame" x="0.0" y="355" width="600" height="245"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -153,15 +153,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Common word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDa-tt-7Bq">
-                                <rect key="frame" x="240" y="72" width="340" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="240" y="73" width="340" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.94901960780000005" green="0.41568627450000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYT-y2-f5v">
-                                <rect key="frame" x="282" y="322" width="37" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYT-y2-f5v">
+                                <rect key="frame" x="200" y="322" width="200" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="fn6-Nj-U6X"/>
+                                    <constraint firstAttribute="width" constant="200" id="fn6-Nj-U6X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -170,7 +170,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fYT-y2-f5v" firstAttribute="centerY" secondItem="Rwj-bb-llm" secondAttribute="centerY" id="4IU-D5-eos"/>
+                            <constraint firstItem="fYT-y2-f5v" firstAttribute="centerY" secondItem="Rwj-bb-llm" secondAttribute="centerY" constant="-1" id="4IU-D5-eos"/>
                             <constraint firstItem="99g-OE-Msu" firstAttribute="top" secondItem="wDa-tt-7Bq" secondAttribute="bottom" constant="8" id="ETT-wn-ECE"/>
                             <constraint firstItem="99g-OE-Msu" firstAttribute="top" secondItem="NIr-0r-bNN" secondAttribute="bottom" constant="8" id="EXZ-kO-TSC"/>
                             <constraint firstAttribute="trailing" secondItem="wDa-tt-7Bq" secondAttribute="trailing" constant="20" id="GM4-fE-6fQ"/>
