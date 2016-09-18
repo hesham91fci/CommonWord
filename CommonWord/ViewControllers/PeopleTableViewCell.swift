@@ -12,5 +12,6 @@ class PeopleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var speechDate:UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var characterName: UILabel!
     
 }

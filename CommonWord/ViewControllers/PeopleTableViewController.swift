@@ -44,12 +44,14 @@ class PeopleTableViewController: UITableViewController {
     func dequeueSteveJobsCell(cell: PeopleTableViewCell) -> PeopleTableViewCell{
         cell.profileImage.image = UIImage(named: NSLocalizedString("STEVE_JOBS", comment: "comment"))
         cell.speechDate.text = NSLocalizedString("STEVE_JOBS_SPEECH_DATE", comment: "comment")
+        cell.characterName.text = NSLocalizedString("STEVE_JOBS", comment: "comment")
         return cell
     }
     
     func dequeueGandhiCell(cell: PeopleTableViewCell) -> PeopleTableViewCell{
         cell.profileImage.image = UIImage(named: NSLocalizedString("GHANDI", comment: "comment"))
         cell.speechDate.text = NSLocalizedString("GHANDI_SPEECH_DATE", comment: "comment")
+        cell.characterName.text = NSLocalizedString("GHANDI", comment: "comment")
         return cell
     }
     /*

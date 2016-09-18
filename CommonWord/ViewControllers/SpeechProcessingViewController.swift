@@ -9,12 +9,19 @@
 import UIKit
 
 class SpeechProcessingViewController: UIViewController {
+    
+    @IBOutlet weak var commonWordLabel: UILabel!
+    @IBOutlet weak var fileContentTextView: UITextView!
+    @IBOutlet weak var progressBarView: UIProgressView!
+    @IBOutlet weak var progressPercentLabel: UILabel!
+    
+    
     var fileContent:String!
     var commonWords=[String:Int]()
-    let pronounsArray=["his","her","hers","your","yours","their","theirs","this","that","those","these"]
-    let verbsArray=["would","have"]
-    let prepositionsArray=["from","with","about"]
-    let questionsArray=["what","whom","which","where","when"]
+    let pronounsArray=["HIS","HER","HRES","YOUR","YOURS","THEIR","THEIRS","THIS","THAT","THOSE","THESE","THEY"]
+    let verbsArray=["WOULD","HAVE"]
+    let prepositionsArray=["FROM","WITH","ABOUT"]
+    let questionsArray=["WHAT","WHOM","WHICH","WHERE","WHEN"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,24 +30,35 @@ class SpeechProcessingViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.readSpeech()
-        let fileContentAsWords = fileContent.characters.split{$0 == " "}.map(String.init)
-        for word in fileContentAsWords {
         
+        NSOperationQueue.mainQueue().addOperationWithBlock({() -> Void in
+            self.readSpeech()
+            self.calculateCommonWord()
+        })
+        
+        
+    }
+    
+    func calculateCommonWord(){
+        
+        let fileContentAsWords = fileContent.characters.split{$0 == " "}.map(String.init)
+        self.updateProgressBar(30.0)
+        for word in fileContentAsWords {
             
-            if let range = word.rangeOfString("\\w+", options: .RegularExpressionSearch) {
+            
+            if let range = word.rangeOfString("\\w+", options: [.RegularExpressionSearch, .CaseInsensitiveSearch]) {
                 let result = word.substringWithRange(range)
-                if result.characters.count<=3 || self.pronounsArray.contains(result)
-                || self.prepositionsArray.contains(result) || self.questionsArray.contains(result)
-                || self.verbsArray.contains(result){
+                if result.characters.count<=3 || self.pronounsArray.contains(result.uppercaseString)
+                    || self.prepositionsArray.contains(result.uppercaseString) || self.questionsArray.contains(result.uppercaseString)
+                    || self.verbsArray.contains(result.uppercaseString){
                     continue
                 }
                 else{
-                    if commonWords[result] == nil {
-                        commonWords[result] = 1
+                    if commonWords[result.lowercaseString] == nil {
+                        commonWords[result.lowercaseString] = 1
                     }
                     else{
-                        commonWords[result]! += 1
+                        commonWords[result.lowercaseString]! += 1
                     }
                 }
                 
@@ -49,13 +67,12 @@ class SpeechProcessingViewController: UIViewController {
             
             
         }
-        
+        self.updateProgressBar(80.0)
         let sortedCommonWords = commonWords.sort{ $0.1 > $1.1 }
-        for (word,frequency) in sortedCommonWords {
-            print(word,frequency)
-        }
+        self.updateProgressBar(90.0)
+        self.commonWordLabel.text = sortedCommonWords.first?.0
+        self.updateProgressBar(100.0)
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -69,20 +86,18 @@ class SpeechProcessingViewController: UIViewController {
         do
         {
             self.fileContent = try String(contentsOfFile: filePath!)
+            self.fileContentTextView.text = self.fileContent
         }
         catch
         {
             self.fileContent = NSLocalizedString("ERROR_IN_FILE_PARSING", comment: "comment")
         }
+        self.updateProgressBar(25.0)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func updateProgressBar(progress:Float){
+        self.progressBarView.setProgress(progress/100, animated: true)
+        self.progressPercentLabel.text = "\(progress)%"
     }
-    */
 
 }
