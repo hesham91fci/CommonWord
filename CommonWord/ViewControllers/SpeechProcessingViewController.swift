@@ -20,7 +20,7 @@ class SpeechProcessingViewController: UIViewController {
     var fileName:String!
     var commonWords=[String:Int]()
     var errorThrown:Bool = false
-    let pronounsArray=["HIS","HER","HRES","YOUR","YOURS","THEIR","THEIRS","THIS","THAT","THOSE","THESE","THEY"]
+    let pronounsArray=["HIS","HER","HERS","YOUR","YOURS","THEIR","THEIRS","THIS","THAT","THOSE","THESE","THEY"]
     let verbsArray=["WOULD","HAVE"]
     let prepositionsArray=["FROM","WITH","ABOUT"]
     let questionsArray=["WHAT","WHOM","WHICH","WHERE","WHEN"]
