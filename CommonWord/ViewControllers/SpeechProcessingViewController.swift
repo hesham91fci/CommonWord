@@ -42,23 +42,25 @@ class SpeechProcessingViewController: UIViewController {
         
         
     }
-    
+    /**
+    * the function which calculate the most frequent word in a text file
+    */
     func calculateCommonWord(){
         
-        let fileContentAsWords = fileContent.characters.split{$0 == " "}.map(String.init)
+        let fileContentAsWords = fileContent.characters.split{$0 == " "}.map(String.init) // eleminating spaces
         self.updateProgressBar(30.0)
         for word in fileContentAsWords {
             
             
-            if let range = word.rangeOfString("\\w+", options: [.RegularExpressionSearch, .CaseInsensitiveSearch]) {
+            if let range = word.rangeOfString("\\w+", options: [.RegularExpressionSearch, .CaseInsensitiveSearch]) { // logic wise the word life is qual to Life the option CaseInsensitiveSearch option is needed
                 let result = word.substringWithRange(range)
                 if result.characters.count<=3 || self.pronounsArray.contains(result.uppercaseString)
                     || self.prepositionsArray.contains(result.uppercaseString) || self.questionsArray.contains(result.uppercaseString)
-                    || self.verbsArray.contains(result.uppercaseString){
+                    || self.verbsArray.contains(result.uppercaseString){ // eleminating the WH questions, small words, pronouns, prepositions and small verbs ignoring their cases
                     continue
                 }
                 else{
-                    if commonWords[result.lowercaseString] == nil {
+                    if commonWords[result.lowercaseString] == nil { // ignoring the case so no equal words logically are put in the dictionary
                         commonWords[result.lowercaseString] = 1
                     }
                     else{
@@ -72,7 +74,7 @@ class SpeechProcessingViewController: UIViewController {
             
         }
         self.updateProgressBar(80.0)
-        let sortedCommonWords = commonWords.sort{ $0.1 > $1.1 }
+        let sortedCommonWords = commonWords.sort{ $0.1 > $1.1 } // sorting the dictionary
         self.updateProgressBar(90.0)
         self.commonWordLabel.text = sortedCommonWords.first?.0
         self.updateProgressBar(100.0)

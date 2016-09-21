@@ -32,6 +32,7 @@ class SpeechUnitTests: XCTestCase {
         self.testReadFile()
         speechProcessingViewController.calculateCommonWord()
         XCTAssert(speechProcessingViewController.commonWords.count != 0)
+        XCTAssert(speechProcessingViewController.commonWordLabel.text?.characters.count>=3) // assert that the common word is not something like [of,am,are,is,in,etc...]
     }
     
     
